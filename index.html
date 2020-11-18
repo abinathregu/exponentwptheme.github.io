@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<!-- header -->
+
+<div class="header">
+    <div class="inline header-left">
+    <ul>
+        <li> <a href="#">Home</a></li>
+        <li> <a href="#">About</a></li>
+        
+        <li class="dropdown-menu"> <a href="#home" >Services <i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-content">
+                <li><a href="#Consulting">Consulting</a></li>
+          <li><a href="#Stock Market">Stock Market</a></li>
+          <li><a href="#Mutual Funds">Mutual Funds</a></li>
+          <li><a href="#Insurance">Insurance</a></li>
+          <li><a href="#Business Loans">Business Loans</a></li>
+          <li><a href="#Money Markets"> Money Markets</a></li>
+            </ul>
+        </li>
+        <li></li>
+    </ul>
+</div>
+<div class="inline header-middle">
+    <a href="second edit.html">
+        <img src="https://exponentwptheme.com/finance/wp-content/uploads/sites/19/2018/12/exp-logo-light.svg" class="logo-img light-logo" alt=""></a>
+    </div>
+    <div class="inline header-right">
+        <ul>
+            <li> <a href="#">Blog</a></li>
+            <li> <a href="#">About</a></li>
+            <li><button class="signup btn">Signup</button></li>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+<!-- slider -->
+     
+<div class="slideshow">
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://exponentwptheme.com/finance/wp-content/uploads/sites/19/2018/09/Home-Hero-IMG.jpg"style="width:100%">
+  <div class="text1 txt1-content">
+      <h2>Better financial future for nex-gen customers </h2>
+      <p>Exponent is a pixel perfect theme, that is tailor made for startups and businesses. Build your website swiftly and easily. </p>
+      <button>LEARN MORE </button>
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://exponentwptheme.com/finance/wp-content/uploads/sites/19/2018/11/Service-6.jpg" style="width:100%">
+  <div class="text1 txt2-content">
+      <h2>Its time to make your money work for you</h2>
+      <p>Exponent is a pixel perfect theme, that is tailor made for startups and businesses. Build your website swiftly and easily. </p>
+      <button>ABOUT US</button>
+  </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://exponentwptheme.com/finance/wp-content/uploads/sites/19/2018/11/Service-2.jpg" style="width:100%">
+  <div class="text2 txt3-content">
+      <h2>Our motto is to balance risk with growth</h2>
+      <p>Perfect blend of spacious layouts, precise typography and trendy design elements </p>
+      <button>CONTACT US</button>
+  </div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+
+<div class="section2">
+    <div class="row1 row">
+        <div class="sectioncolumn1">
+         <h3>Some of the investment services we offer</h3>
+         <p>Over 30 high quality professionally designed pre-built website concepts to choose from.&nbsp;
+             Build your website using a fully visual interface, using our revolutionary page &amp; 
+             header builder.</p>
+        </div>
+        <div class="sectioncolumn2">
+         <div class="row">
+             <div class="sectioncolumn3">
+                    <h3>Equity Markets</h3>
+                <p>Invest and Trade in companies you believe in directly.</p>
+             </div>
+             <div class="sectioncolumn4">
+                 <h3>Insurance</h3>
+                 <p>Tax savings coupled with insurance for the risk averse</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sectioncolumn3">
+                <h3>Mutual funds</h3>
+                <p>Let the experts handle the work of making you rich</p>
+            </div>
+            <div class="sectioncolumn4">
+              <h3>Fixed deposits</h3>
+              <p>Your money is safe and sound and you get guranteed returns</p>
+           </div>
+       </div>
+      </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
